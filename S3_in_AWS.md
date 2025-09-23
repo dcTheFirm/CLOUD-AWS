@@ -1,4 +1,4 @@
-#1 -> Accessing AWS S3 Bucket
+## 1. S3 bucket in AWS
 
 ## Bucket Details
 
@@ -10,7 +10,7 @@
   * Versioning enabled for object recovery
   * Default encryption (SSE-S3) enabled for all objects
   * Block Public Access enabled initially for security
-
+<img width="1511" height="691" alt="Screenshot From 2025-09-23 18-39-53" src="https://github.com/user-attachments/assets/d7a7c4f4-6873-479d-98ec-fc458b69d45d" />
 ---
 
 ## Step 1: Configure AWS CLI
@@ -60,7 +60,13 @@ aws s3 presign s3://my-bucket120012/quote.png --expires-in 3600 --region eu-nort
 * Open the link in browser to view the image.
 * This URL will expire after 1 hour.
 
-**Output Screenshot:** *(attach image showing CLI command and output)*
+**Output Screenshot:** *
+<img width="1420" height="261" alt="Screenshot From 2025-09-23 19-03-28" src="https://github.com/user-attachments/assets/30680cc9-8958-4377-9fd1-76a2d2633c40" />
+
+<img width="1920" height="1080" alt="Screenshot From 2025-09-23 18-39-19" src="https://github.com/user-attachments/assets/bc9ceae1-d56a-4047-8a8b-0200498d116b" />
+
+<img width="1455" height="854" alt="Screenshot From 2025-09-23 18-51-21" src="https://github.com/user-attachments/assets/944f09f6-ce63-44a0-a8fe-58bf83b31b54" />
+
 
 ---
 
@@ -150,8 +156,9 @@ aws s3 presign s3://my-bucket120012/quote.png --expires-in 3600 --region eu-nort
 # Make object public
 aws s3api put-object-acl --bucket my-bucket120012 --key quote.png --acl public-read --region eu-north-1
 ```
-
 ---
+
+<img width="1455" height="854" alt="Screenshot From 2025-09-23 18-58-38" src="https://github.com/user-attachments/assets/d62a3958-1d1b-46dd-93be-554c8d306500" />
 
 ## ✅ What I Learned
 
@@ -163,11 +170,9 @@ aws s3api put-object-acl --bucket my-bucket120012 --key quote.png --acl public-r
 * How to use **AWS CLI commands** efficiently.
 * Importance of **region awareness** and **object-level permissions**.
 * Analyzing Errors  on the web if the object was deleted.
-*  
-**All CLI commands outputs and screenshots are attached in the repository.**
-<img width="1420" height="261" alt="Screenshot From 2025-09-23 19-03-28" src="https://github.com/user-attachments/assets/30680cc9-8958-4377-9fd1-76a2d2633c40" />
-<img width="1455" height="854" alt="Screenshot From 2025-09-23 18-58-38" src="https://github.com/user-attachments/assets/d62a3958-1d1b-46dd-93be-554c8d306500" />
-<img width="1455" height="854" alt="Screenshot From 2025-09-23 18-51-21" src="https://github.com/user-attachments/assets/944f09f6-ce63-44a0-a8fe-58bf83b31b54" />
-<img width="1511" height="691" alt="Screenshot From 2025-09-23 18-39-53" src="https://github.com/user-attachments/assets/d7a7c4f4-6873-479d-98ec-fc458b69d45d" />
-<img width="1920" height="1080" alt="Screenshot From 2025-09-23 18-39-19" src="https://github.com/user-attachments/assets/bc9ceae1-d56a-4047-8a8b-0200498d116b" />
+  
+
+
+
+
 
