@@ -1,4 +1,4 @@
-## 1. S3 bucket in AWS
+## 1. S3 bucket in AWS.
 
 ## Bucket Details
 
