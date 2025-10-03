@@ -82,9 +82,7 @@ https://my-bucket120012.s3.eu-north-1.amazonaws.com/quote.png
 
 * Open this URL in a browser to view the image.
 
-**Output Screenshot:** *(attach image showing public access test)*
 
----
 
 ## Step 5: Bucket Policy for Full Public Access
 
@@ -109,9 +107,7 @@ https://my-bucket120012.s3.eu-north-1.amazonaws.com/quote.png
 
 * Any object URL will now be accessible publicly.
 
-**Output Screenshot:** *(attach image showing bucket policy applied)*
 
----
 
 ## Step 6: Static Website Hosting
 
@@ -129,9 +125,6 @@ http://my-bucket120012.s3-website.eu-north-1.amazonaws.com
 
 * Open in browser → website live.
 
-**Output Screenshot:** *(attach image showing live website)*
-
----
 
 ## Step 7: Summary of Commands Used
 
