@@ -1,6 +1,24 @@
 ## 1. S3 bucket in AWS.
+AWS S3 Static Hosting: Easy but Tricky
 
+Tried hosting a demo webpage on S3 recently. Super easy — just upload index.html, enable static hosting… but then: 403 Access Denied 😅
+
+Why?
+
+🔒 S3 is private by default.
+
+No one can access your files unless you explicitly allow it.
+
+You have to add a bucket policy to permit s3:GetObject or disable the block public access.
+
+✅ Works perfectly for demos, portfolios, or static sites.
+❌ But for real apps with sensitive data, making the bucket public is not safe.
+
+💡 Takeaway:
+AWS defaults to secure by design. Public access is optional — perfect for learning, but for production, pair with CloudFront, signed URLs, or EC2.
 ## Bucket Details
+
+## Let's chekout some stuff: 
 
 * **Bucket Name:** my-bucket120012
 * **Region:** eu-north-1
@@ -60,7 +78,7 @@ aws s3 presign s3://my-bucket120012/quote.png --expires-in 3600 --region eu-nort
 * Open the link in browser to view the image.
 * This URL will expire after 1 hour.
 
-**Output Screenshot:** *
+
 <img width="1420" height="261" alt="Screenshot From 2025-09-23 19-03-28" src="https://github.com/user-attachments/assets/30680cc9-8958-4377-9fd1-76a2d2633c40" />
 
 <img width="1920" height="1080" alt="Screenshot From 2025-09-23 18-39-19" src="https://github.com/user-attachments/assets/bc9ceae1-d56a-4047-8a8b-0200498d116b" />
