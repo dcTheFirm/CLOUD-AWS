@@ -39,6 +39,8 @@ terraform apply
 
 # 3. See the magic happen!
 ssh ec2-user@your-ec2-ip
+
+aws s3 ls 
 ```
 
 ## Refer the Media for clarity..
